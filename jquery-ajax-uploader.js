@@ -24,6 +24,9 @@ $(document).ready(function () {
   $("." + ajaxUploadOptions.containerClass).on("dragenter dragover", function (e) {
     $(this).addClass(ajaxUploadOptions.dragOverClass);
 
+
+    e.originalEvent.dataTransfer.dropEffect = "copy";
+
     e.preventDefault();
     e.stopPropagation();
   });
