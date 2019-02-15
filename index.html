@@ -9,6 +9,30 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
   <script src="jquery-ajax-uploader.js"></script>
 
+  <script>
+
+    var ajaxUploadOptions = {
+      containerClass: "container",
+      dragOverClass: "dragover",
+      inputFileClass: "file-selector",
+      dataToId: "data-toId",
+      blockUIMessage: "<span>Processing</span>",
+      webServiceUrl: "[URL_TO_WEBSERVICE]?toId=",
+      success: function () {
+        console.log("success")
+      },
+      error: function () {
+        console.log("error")
+      },
+      complete: function () {
+        console.log("complete")
+      }
+    }
+
+    initAjaxUploadOptions(ajaxUploadOptions);
+
+  </script>
+
   <style>
     .container {
       border: 1px dashed;
